@@ -30,13 +30,7 @@ public class Move : MonoBehaviour
 
     void Move_2()
     {
-        float moveDelta = this.moveSpeed * Time.deltaTime;
-        this.transform.Translate(Vector3.forward * moveDelta);
-    }
-
-    void Move_3()
-    {
-        if(Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             float moveDelta = this.moveSpeed * Time.deltaTime;
             this.transform.Translate(Vector3.forward * moveDelta);
@@ -46,5 +40,13 @@ public class Move : MonoBehaviour
             float moveDelta = this.moveSpeed * Time.deltaTime;
             this.transform.Translate(Vector3.back * moveDelta);
         }
+    }
+
+    void Move_3()
+    {
+        float z = Input.GetAxis("Vertical"); // w : +,  s : - (1 ~ -1)
+        z = z * moveSpeed * Time.deltaTime; // 이동량
+        gameObject.transform.Translate(Vector3.forward * z); // 앞뒤로 움직임
+
     }
 }

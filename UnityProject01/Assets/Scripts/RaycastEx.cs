@@ -27,8 +27,8 @@ public class RaycastEx : MonoBehaviour
     {
         //Ray_1();
         //Ray_2();
-        Ray_3();
-        //Ray_FindObj();
+        //Ray_3();
+        Ray_FindObj();
     }
 
     private void OnDrawGizmos()
@@ -45,26 +45,27 @@ public class RaycastEx : MonoBehaviour
     {
         if(rayHits != null)
         {
-            for(int index = 0; index < this.rayHits.Length; index++)
+            for (int index = 0; index < this.rayHits.Length; index++)
             {
-                if(this.rayHits[index].collider != null)
+                if (this.rayHits[index].collider != null)
                 {
                     Gizmos.color = Color.red;
                     Gizmos.DrawSphere(this.rayHits[index].point, 0.1f);
+
+
+                    Gizmos.color = Color.cyan;
+                    Gizmos.DrawLine(transform.position,
+                        transform.position + transform.forward * rayHits[index].distance);
+
+
+                    Gizmos.color = Color.yellow;
+                    Gizmos.DrawLine(rayHits[index].point, rayHits[index].point + rayHits[index].normal);
+
+                    // 반사방향
+                    Gizmos.color = new Color(1.0f, 0.0f, 1.0f);
+                    Vector3 reflect = Vector3.Reflect(transform.forward, rayHits[index].normal);
+                    Gizmos.DrawLine(rayHits[index].point, rayHits[index].point + reflect);
                 }
-
-                Gizmos.color = Color.cyan;
-                Gizmos.DrawLine(transform.position, 
-                    transform.position + transform.forward * rayHits[index].distance);
-
-                
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawLine(rayHits[index].point, rayHits[index].point + rayHits[index].normal);
-
-                // 반사방향
-                Gizmos.color = new Color(1.0f, 0.0f, 1.0f);
-                Vector3 reflect = Vector3.Reflect(transform.forward, rayHits[index].normal);
-                Gizmos.DrawLine(rayHits[index].point, rayHits[index].point + reflect);
             }
         }
         else
@@ -115,5 +116,16 @@ public class RaycastEx : MonoBehaviour
         float dist = Vector3.Distance(otherTrans.position, this.transform.position);
         Debug.DrawRay(ray.origin, dir * dist, Color.red);
 
+        rayHits = Physics.SphereCastAll(ray, 1.0f, distance);
+
+        for (int index = 0; index < rayHits.Length; index++)
+        {
+           // if(rayHits[index].collider != null)
+            {
+                // 삭제
+                //Destroy(rayHits[index].collider.gameObject);
+                rayHits[index].collider.gameObject.SetActive(false);
+            }
+        }
     }
 }
