@@ -6,22 +6,19 @@ public class AutoMove : MonoBehaviour
 {
     public GameObject CAR;
 
-
     [Range(0, 50)]
     public float distance = 15.0f;
-    public float moveSpeed = 1.0f;
+    public float moveSpeed = 0.0f;
     public float speedRotate = 100.0f;
+    public bool chk = false;
 
     private RaycastHit[] rayLeft;
     private RaycastHit[] rayRight;
-    private Ray rayR;
-    private Ray rayL;
 
     // Start is called before the first frame update
     void Start()
     {
-        rayR = new Ray(transform.position, transform.forward + transform.right);
-        rayL = new Ray(transform.position, transform.forward - transform.right);
+
     }
 
     // Update is called once per frame
@@ -44,13 +41,9 @@ public class AutoMove : MonoBehaviour
             {
                 if(this.rayRight[i].collider.gameObject.tag == "Wall")
                 {
-                    Gizmos.DrawLine(transform.position, transform.position + rayRight[i].point);
+                    Gizmos.DrawLine(transform.position, rayRight[i].point);
                 }
             }
-        }
-        else
-        {
-            Gizmos.DrawLine(transform.position, transform.position + (transform.forward +transform.right) * distance);
         }
 
         if (rayLeft != null)
@@ -59,20 +52,16 @@ public class AutoMove : MonoBehaviour
             {
                 if (this.rayLeft[i].collider.gameObject.tag == "Wall")
                 {
-                    Gizmos.DrawLine(transform.position, transform.position + rayLeft[i].point);
+                    Gizmos.DrawLine(transform.position, rayLeft[i].point);
                 }
             }
-        }
-        else
-        {
-            Gizmos.DrawLine(transform.position, transform.position + (transform.forward - transform.right) * distance);
         }
     }
 
     void AUTOMOVE()
     {
-        rayLeft = Physics.RaycastAll(rayL, distance);
-        rayRight = Physics.RaycastAll(rayR, distance);
+        rayLeft = Physics.RaycastAll(transform.position, transform.forward - transform.right, distance);
+        rayRight = Physics.RaycastAll(transform.position, transform.forward + transform.right, distance);
         bool LEFT = false;
         bool RIGHT = false;
 
@@ -92,20 +81,35 @@ public class AutoMove : MonoBehaviour
         }
         float rotate = speedRotate * Time.deltaTime;
         float moveDelta = this.moveSpeed * Time.deltaTime;
+        CAR.transform.Translate(Vector3.forward * moveDelta);
 
-        if (LEFT && RIGHT)
-        {
-            CAR.transform.Translate(Vector3.forward * moveDelta);
-        }
         if (LEFT && !RIGHT)
         {
             CAR.transform.Rotate(Vector3.up * rotate);
-            CAR.transform.Translate(Vector3.forward * moveDelta);
         }
         if (!LEFT && RIGHT)
         {
             CAR.transform.Rotate(Vector3.up * (-rotate));
-            CAR.transform.Translate(Vector3.forward * moveDelta);
         }
+        if (moveSpeed >= 20.0f) moveSpeed = 20.0f;
+        moveSpeed += 0.1f;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        moveSpeed = 10.0f;
+        //hitObject.transform.Translate(Vector3.forward * 0);
+        //CAR.transform.Translate(Vector3.forward * 0);
+    }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(!chk)
+    //    {
+    //        GameManager.Instance.EndTimeChk(CAR);
+    //        chk = true;
+    //    }
+    //}
+
+
 }

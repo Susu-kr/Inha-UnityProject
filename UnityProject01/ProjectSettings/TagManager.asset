@@ -7,6 +7,13 @@ TagManager:
   - Box
   - Ball
   - Wall
+  - Sword
+  - EnemySword
+  - Enemy
+  - Border
+  - Border Bullet
+  - Player Bullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -43,4 +50,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 3493768039
+    locked: 0
+  - name: Item
+    uniqueID: 1096823007
+    locked: 0
+  - name: Enemy
+    uniqueID: 3165566825
+    locked: 0
+  - name: Player
+    uniqueID: 231189363
     locked: 0
