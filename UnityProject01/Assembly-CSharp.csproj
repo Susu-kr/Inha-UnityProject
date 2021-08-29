@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Racing\GameManager.cs" />
     <Compile Include="Assets\_Gloomy_Animal\Script\CharacterSelect.cs" />
     <Compile Include="Assets\Scripts\Bird\ObstacleMove.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\OptionPopup.cs" />
     <Compile Include="Assets\Scripts\Class\06Camera\RoomMirror.cs" />
     <Compile Include="Assets\Scripts\Defense\DefenseEnd.cs" />
     <Compile Include="Assets\Scripts\Class\01Basic\FunctionCallTest.cs" />
@@ -65,7 +66,6 @@
     <Compile Include="Assets\Scripts\Defense\DefenseStart.cs" />
     <Compile Include="Assets\Scripts\Class\06Camera\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Bird\FlappyBirdEnd.cs" />
-    <Compile Include="Assets\Scripts\Class\08Proj2D\PlayerBullet.cs" />
     <Compile Include="Assets\Scripts\Class\07Animation\Enemy.cs" />
     <Compile Include="Assets\Scripts\Racing\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Class\02Ray\RaycastEx.cs" />
@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Racing\GUI_Test.cs" />
     <Compile Include="Assets\Scripts\Defense\DefenseSpawner.cs" />
     <Compile Include="Assets\Scripts\Racing\GameManager2.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\GameManager2D.cs" />
     <Compile Include="Assets\Scripts\Bird\Bird.cs" />
     <Compile Include="Assets\Scripts\Class\05Material\MaterialTest.cs" />
     <Compile Include="Assets\Scripts\Class\07Animation\CoroutineTest.cs" />
@@ -92,9 +93,10 @@
     <Compile Include="Assets\Scripts\Defense\DefenseEnemy.cs" />
     <Compile Include="Assets\Scripts\Class\08Proj2D\Bullet1.cs" />
     <Compile Include="Assets\Scripts\Class\08Proj2D\Player2D.cs" />
-    <Compile Include="Assets\Scripts\Class\08Proj2D\OptionPopup.cs" />
     <Compile Include="Assets\Vertical 2D Shooting BE4\ReadMe\Scripts\ReadmeBE4.cs" />
-    <Compile Include="Assets\Scripts\Class\08Proj2D\GameManager2D.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\Item.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\BackGround.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\ObjectManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpartanKing\animations.txt" />

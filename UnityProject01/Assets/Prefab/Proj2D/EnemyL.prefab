@@ -155,11 +155,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937176fc20c57354a8346fe2111796d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  health: 5
+  speed: 75
+  health: 10
   enemyName: L
-  maxShotDelay: 5
+  enemyScore: 100
+  maxShotDelay: 3
   curShotDelay: 0
   bulletObjA: {fileID: 2552343027885167219, guid: 7faa0550087d5a547bacbaf3651d7f9d, type: 3}
   bulletObjB: {fileID: 2552343027885167219, guid: 17ae213d0b0dcc4429b2b35e613d83d1, type: 3}
+  ItemCoin: {fileID: 8739540118812984018, guid: 5a1fc18981321d64dab1e32163ded661, type: 3}
+  ItemPower: {fileID: 6956739491902223902, guid: 1af2aebb36c5ed0448802e062a8c3ba3, type: 3}
+  ItemBoom: {fileID: 260088342417544016, guid: 7590a62f66971b2419e703a8abd3f5f8, type: 3}
   player: {fileID: 0}
+  objectManager: {fileID: 0}

@@ -14,6 +14,7 @@ TagManager:
   - Border Bullet
   - Player Bullet
   - EnemyBullet
+  - Item
   layers:
   - Default
   - TransparentFX

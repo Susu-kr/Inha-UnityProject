@@ -21,7 +21,7 @@ public class Bullet1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Border Bullet")
         {
-            Destroy(gameObject);
+           gameObject.SetActive(false);
         }
     }
 }

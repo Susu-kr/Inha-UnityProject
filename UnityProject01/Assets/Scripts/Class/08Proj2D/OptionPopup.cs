@@ -24,10 +24,16 @@ public class OptionPopup : MonoBehaviour
         
     }
 
+    public void onCloseButton()
+    {
+        Time.timeScale = 1.0f;
+        gameObject.SetActive(false);
+    }
+
     void onOKButton()
     {
         Debug.Log("onOKButton");
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public void onTextChanged()
