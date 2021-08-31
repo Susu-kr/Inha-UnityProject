@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Class/08Proj2D.unity
+    path: Assets/Scenes/Shooting/ShootingGame.unity
     guid: 069bf698940ddf4429fb98f832f5e249
   m_configObjects: {}

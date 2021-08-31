@@ -14,8 +14,8 @@ public class DefaultUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ShowScore(100);
-        ShowHPBar(50);
+        //ShowScore(100);
+        //ShowHPBar(50);
         popupObj.SetActive(false);
     }
 
@@ -25,15 +25,15 @@ public class DefaultUI : MonoBehaviour
         
     }
 
-    public void ShowScore(int score)
-    {
-        txtScore.text = "Score : <color=#0000ff> " + score.ToString() + "</color>";
-    }
+    //public void ShowScore(int score)
+    //{
+    //    txtScore.text = "Score : <color=#0000ff> " + score.ToString() + "</color>";
+    //}
 
-    public void ShowHPBar(int hp)
-    {
-        imgHPBar.fillAmount = (float)hp / (float)100;
-    }
+    //public void ShowHPBar(int hp)
+    //{
+    //    imgHPBar.fillAmount = (float)hp / (float)100;
+    //}
 
     void onOptionButton()
     {

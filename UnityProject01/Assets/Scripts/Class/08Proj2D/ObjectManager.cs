@@ -11,8 +11,9 @@ public class ObjectManager : MonoBehaviour
         가비지컬렉트 : 쌓인 조각난 메모리를 비우는 기술
     */
     // 프리펩 변수 할당
-    public GameObject enemyLPrefab;
     public GameObject enemySPrefab;
+    public GameObject enemyLPrefab;
+    public GameObject enemyBPrefab;
     public GameObject itemCoinPrefab;
     public GameObject itemPowerPrefab;
     public GameObject itemBoomPrefab;
@@ -21,10 +22,17 @@ public class ObjectManager : MonoBehaviour
     public GameObject bulletPlayerCPrefab;
     public GameObject bulletEnemyAPrefab;
     public GameObject bulletEnemyBPrefab;
+    public GameObject bulletBossAPrefab;
+    public GameObject bulletBossBPrefab;
+    public GameObject EffectAPrefab;
+    public GameObject EffectBPrefab;
+    public GameObject EffectCPrefab;
 
-    GameObject[] EnemyL;
+
+
     GameObject[] EnemyS;
-
+    GameObject[] EnemyL;
+    GameObject[] EnemyB;
     GameObject[] ItemCoin;
     GameObject[] ItemPower;
     GameObject[] ItemBoom;
@@ -34,13 +42,20 @@ public class ObjectManager : MonoBehaviour
     GameObject[] BulletPlayerC;
     GameObject[] BulletEnemyA;
     GameObject[] BulletEnemyB;
+    GameObject[] BulletBossA;
+    GameObject[] BulletBossB;
+
+    GameObject[] EffectA;
+    GameObject[] EffectB;
+    GameObject[] EffectC;
 
     GameObject[] targetPool;
 
     void Awake()
     {
-        EnemyL = new GameObject[10];
         EnemyS = new GameObject[10];
+        EnemyL = new GameObject[10];
+        EnemyB = new GameObject[1];
 
         ItemCoin = new GameObject[20];
         ItemPower = new GameObject[10];
@@ -52,6 +67,13 @@ public class ObjectManager : MonoBehaviour
 
         BulletEnemyA = new GameObject[100];
         BulletEnemyB = new GameObject[100];
+
+        BulletBossA = new GameObject[50];
+        BulletBossB = new GameObject[1000];
+
+        EffectA = new GameObject[100];
+        EffectB = new GameObject[100];
+        EffectC = new GameObject[100];
 
         Generate();
     }
@@ -68,6 +90,11 @@ public class ObjectManager : MonoBehaviour
         {
             EnemyS[index] = Instantiate(enemySPrefab);
             EnemyS[index].SetActive(false);
+        }
+        for (int index = 0; index < EnemyB.Length; index++)
+        {
+            EnemyB[index] = Instantiate(enemyBPrefab);
+            EnemyB[index].SetActive(false);
         }
         // #2.Item
         for (int index = 0; index < ItemCoin.Length; index++)
@@ -112,6 +139,35 @@ public class ObjectManager : MonoBehaviour
             BulletEnemyB[index] = Instantiate(bulletEnemyBPrefab);
             BulletEnemyB[index].SetActive(false);
         }
+
+        // #5. Boss Bullet
+        for (int index = 0; index < BulletBossA.Length; index++)
+        {
+            BulletBossA[index] = Instantiate(bulletBossAPrefab);
+            BulletBossA[index].SetActive(false);
+        }
+        for (int index = 0; index < BulletBossB.Length; index++)
+        {
+            BulletBossB[index] = Instantiate(bulletBossBPrefab);
+            BulletBossB[index].SetActive(false);
+        }
+
+        // #6. Effect
+        for (int index = 0; index < EffectA.Length; index++)
+        {
+            EffectA[index] = Instantiate(EffectAPrefab);
+            EffectA[index].SetActive(false);
+        }
+        for (int index = 0; index < EffectB.Length; index++)
+        {
+            EffectB[index] = Instantiate(EffectBPrefab);
+            EffectB[index].SetActive(false);
+        }
+        for (int index = 0; index < EffectC.Length; index++)
+        {
+            EffectC[index] = Instantiate(EffectCPrefab);
+            EffectC[index].SetActive(false);
+        }
     }
 
     // # 풀 활용
@@ -124,6 +180,9 @@ public class ObjectManager : MonoBehaviour
                 break;
             case "EnemyS":
                 targetPool = EnemyS;
+                break;
+            case "EnemyB":
+                targetPool = EnemyB;
                 break;
             case "ItemCoin":
                 targetPool = ItemCoin;
@@ -148,6 +207,21 @@ public class ObjectManager : MonoBehaviour
                 break;
             case "BulletEnemyB":
                 targetPool = BulletEnemyB;
+                break;
+            case "BulletBossA":
+                targetPool = BulletBossA;
+                break;
+            case "BulletBossB":
+                targetPool = BulletBossB;
+                break;
+            case "EffectA":
+                targetPool = EffectA;
+                break;
+            case "EffectB":
+                targetPool = EffectB;
+                break;
+            case "EffectC":
+                targetPool = EffectC;
                 break;
         }
 
@@ -166,11 +240,14 @@ public class ObjectManager : MonoBehaviour
     {
         switch (type)
         {
+            case "EnemyS":
+                targetPool = EnemyS;
+                break;
             case "EnemyL":
                 targetPool = EnemyL;
                 break;
-            case "EnemyS":
-                targetPool = EnemyS;
+            case "EnemyB":
+                targetPool = EnemyB;
                 break;
             case "ItemCoin":
                 targetPool = ItemCoin;
@@ -196,7 +273,40 @@ public class ObjectManager : MonoBehaviour
             case "BulletEnemyB":
                 targetPool = BulletEnemyB;
                 break;
+            case "BulletBossA":
+                targetPool = BulletBossA;
+                break;
+            case "BulletBossB":
+                targetPool = BulletBossB;
+                break;
+            case "EffectA":
+                targetPool = EffectA;
+                break;
+            case "EffectB":
+                targetPool = EffectB;
+                break;
+            case "EffectC":
+                targetPool = EffectC;
+                break;
         }
         return targetPool;
+    }
+
+    public void DeleteAllObj(string type) // Boss 잡을시 총알 제거
+    {
+        if(type == "B")
+        {
+            for (int index = 0; index < BulletEnemyA.Length; index++)
+                BulletEnemyA[index].SetActive(false);
+
+            for (int index = 0; index < BulletEnemyB.Length; index++)
+                BulletEnemyB[index].SetActive(false);
+
+            for (int index = 0; index < BulletBossA.Length; index++)
+                BulletBossA[index].SetActive(false);
+
+            for (int index = 0; index < BulletBossB.Length; index++)
+                BulletBossB[index].SetActive(false);
+        }
     }
 }

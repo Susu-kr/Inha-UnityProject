@@ -9,13 +9,15 @@ public class OptionPopup : MonoBehaviour
     public InputField inputText;
 
     public GameObject toggleObj;
+    public GameObject Sound;
 
+    public AudioSource BG;
     Toggle toggleTest;
     // Start is called before the first frame update
     void Start()
     {
         toggleTest = toggleObj.GetComponent<Toggle>();
-
+        BG = Sound.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,8 +34,8 @@ public class OptionPopup : MonoBehaviour
 
     void onOKButton()
     {
-        Debug.Log("onOKButton");
-        //gameObject.SetActive(false);
+        Time.timeScale = 1.0f;
+        gameObject.SetActive(false);
     }
 
     public void onTextChanged()
@@ -50,9 +52,10 @@ public class OptionPopup : MonoBehaviour
     {
         if(toggleTest.isOn)
         {
-            titleText.text = "Toggle On";
+            BG.Play();
+
             return;
         }
-        titleText.text = "Toggle Off";
+        BG.Stop();
     }
 }
