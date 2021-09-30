@@ -6,45 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Class/Title.unity
-    guid: 4fd022206406a7144aa1c9ccada7ea6d
-  - enabled: 1
-    path: Assets/Scenes/Class/14Loading.unity
-    guid: eee29d869446dbf4faf764acef760302
-  - enabled: 1
-    path: Assets/Scenes/Maze/10NavyMeshAgent.unity
-    guid: 86d3b02e87ee2fa45a5af905fbc5d9ee
-  - enabled: 1
-    path: Assets/Scenes/Racing/Start.unity
-    guid: 35116b0602c662f48ac95e00b5fd82e2
-  - enabled: 1
-    path: Assets/Scenes/Racing/End.unity
-    guid: 600d5616c52584a47949c16ad59052eb
-  - enabled: 1
-    path: Assets/Scenes/Racing/Racing.unity
-    guid: b8fcf66db9b453240853c8e46bb53ecd
-  - enabled: 1
-    path: Assets/Scenes/Shooting/ShootingTitle.unity
-    guid: 34e5664651342ce4a9ae038ccc414033
-  - enabled: 1
     path: Assets/Scenes/Shooting/ShootingGame.unity
     guid: 069bf698940ddf4429fb98f832f5e249
-  - enabled: 1
-    path: Assets/Scenes/Flappy Bird/04-01 Flappy Bird Start.unity
-    guid: 0bfa7e338400b384c99bb30a63bf7ca7
-  - enabled: 1
-    path: Assets/Scenes/Flappy Bird/04-02 Flappy Bird Game.unity
-    guid: 7605d2b24e1913e45a899c3cd5a24653
-  - enabled: 1
-    path: Assets/Scenes/Flappy Bird/04-03 Flappy Bird End.unity
-    guid: 7ac996080c8cfec4d976f5ee1b673b82
-  - enabled: 1
-    path: Assets/Scenes/Defense/Defense_Start.unity
-    guid: e7339dd0bff1343429fc3e39455bb337
-  - enabled: 1
-    path: Assets/Scenes/Defense/Defense_Game.unity
-    guid: 11f02fae2f8b5144f8dcb8d3dc561313
-  - enabled: 1
-    path: Assets/Scenes/Defense/Defense_End.unity
-    guid: a17292086736fa34d9985664479da023
   m_configObjects: {}

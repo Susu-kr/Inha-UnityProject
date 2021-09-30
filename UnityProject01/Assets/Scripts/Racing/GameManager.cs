@@ -46,11 +46,8 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public string nextSceneName = "";
-
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
-
 }

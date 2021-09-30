@@ -108,7 +108,6 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"Assets/Plugin/LitJson.dll"
 -r:"D:/2021.1.17f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/2021.1.17f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/2021.1.17f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -343,7 +342,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
-"Assets/Editor/InhaMenu.cs"
 "Assets/unity-chan!/Unity-chan! Model/Editor/CreateLocatorHere.cs"
 "Assets/Vertical 2D Shooting BE4/ReadMe/Scripts/Editor/ReadmeEditorBE4.cs"
 -langversion:8.0

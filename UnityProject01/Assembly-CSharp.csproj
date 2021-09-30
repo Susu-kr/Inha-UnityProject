@@ -53,41 +53,35 @@
     <UnityVersion>2021.1.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Maze\NavyMecanim.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\NavyMecanim.cs" />
     <Compile Include="Assets\Scripts\Racing\GameManager.cs" />
     <Compile Include="Assets\_Gloomy_Animal\Script\CharacterSelect.cs" />
     <Compile Include="Assets\Scripts\Class\09Mecanim\MecanimControl.cs" />
-    <Compile Include="Assets\Scripts\Class\14Loading\CheckWindow.cs" />
     <Compile Include="Assets\Scripts\Bird\ObstacleMove.cs" />
-    <Compile Include="Assets\Scripts\Shooting\OptionPopup.cs" />
-    <Compile Include="Assets\Scripts\Shooting\Spawn.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\OptionPopup.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\Spawn.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
     <Compile Include="Assets\Scripts\Class\06Camera\RoomMirror.cs" />
     <Compile Include="Assets\Scripts\Defense\DefenseEnd.cs" />
-    <Compile Include="Assets\Scripts\Class\12SaveLoad\SaveLoad.cs" />
     <Compile Include="Assets\Scripts\Class\01Basic\FunctionCallTest.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
     <Compile Include="Assets\Scripts\Bird\FlappyBirdStart.cs" />
     <Compile Include="Assets\Scripts\Class\01Basic\Move.cs" />
     <Compile Include="Assets\Scripts\Class\07Animation\PlayerControl.cs" />
-    <Compile Include="Assets\Scripts\Maze\Movement3D.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\Movement3D.cs" />
     <Compile Include="Assets\Scripts\Defense\DefenseStart.cs" />
     <Compile Include="Assets\Scripts\Class\06Camera\CameraControl.cs" />
-    <Compile Include="Assets\Scripts\Class\14Loading\GameTitle.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\Bird\FlappyBirdEnd.cs" />
-    <Compile Include="Assets\Scripts\Class\12SaveLoad\JSONtest.cs" />
-    <Compile Include="Assets\Scripts\Maze\Diretion.cs" />
-    <Compile Include="Assets\Scripts\Maze\Key.cs" />
-    <Compile Include="Assets\Scripts\Maze\DataController.cs" />
-    <Compile Include="Assets\Scripts\Shooting\BackGround.cs" />
-    <Compile Include="Assets\Scripts\Class\12SaveLoad\CSVReader.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\Diretion.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\Key.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\BackGround.cs" />
     <Compile Include="Assets\Scripts\Class\07Animation\Enemy.cs" />
     <Compile Include="Assets\Scripts\Racing\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Maze\CameraRotate.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\CameraRotate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
-    <Compile Include="Assets\Scripts\Maze\MazeManager.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\MazeManager.cs" />
     <Compile Include="Assets\Scripts\Class\02Ray\RaycastEx.cs" />
     <Compile Include="Assets\Scripts\Class\01Basic\Rotate.cs" />
     <Compile Include="Assets\Scripts\Racing\StartScene.cs" />
@@ -95,43 +89,39 @@
     <Compile Include="Assets\Scripts\Racing\EndScene.cs" />
     <Compile Include="Assets\Scripts\Racing\AutoMove.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Shooting\Explosion.cs" />
-    <Compile Include="Assets\Scripts\Shooting\Enemy2D.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\Enemy2D.cs" />
     <Compile Include="Assets\Scripts\Class\03Collision\CollisionTest.cs" />
     <Compile Include="Assets\Scripts\Defense\DefenseTarget.cs" />
-    <Compile Include="Assets\Scripts\Shooting\DefaultUI.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\DefaultUI.cs" />
     <Compile Include="Assets\Scripts\Defense\DefensePlayer.cs" />
     <Compile Include="Assets\_Gloomy_Animal\Script\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\Class\09Mecanim\IKTest.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\MazeObjectManager.cs" />
     <Compile Include="Assets\Scripts\Bird\FlappyBird.cs" />
-    <Compile Include="Assets\Scripts\Maze\MazeObjectManager.cs" />
     <Compile Include="Assets\Scripts\Defense\DefenseGameManager.cs" />
     <Compile Include="Assets\Scripts\Bird\Spawner.cs" />
-    <Compile Include="Assets\Scripts\Shooting\ObjectManager.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\ObjectManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
     <Compile Include="Assets\Scripts\Racing\GUI_Test.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
     <Compile Include="Assets\Scripts\Defense\DefenseSpawner.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
-    <Compile Include="Assets\Scripts\Shooting\StartButton.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\StartButton.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\Scripts\Racing\GameManager2.cs" />
-    <Compile Include="Assets\Scripts\Shooting\Item.cs" />
-    <Compile Include="Assets\Scripts\Shooting\GameManager2D.cs" />
-    <Compile Include="Assets\Scripts\Class\14Loading\TestObj.cs" />
-    <Compile Include="Assets\Scripts\Class\14Loading\LoadingScene.cs" />
-    <Compile Include="Assets\Scripts\Class\12SaveLoad\CSVTest.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\Item.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\GameManager2D.cs" />
     <Compile Include="Assets\Scripts\Bird\Bird.cs" />
     <Compile Include="Assets\Scripts\Class\05Material\MaterialTest.cs" />
     <Compile Include="Assets\Scripts\Class\07Animation\CoroutineTest.cs" />
-    <Compile Include="Assets\Scripts\Maze\EnemyMecanim.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\EnemyMecanim.cs" />
     <Compile Include="Assets\Scripts\Class\01Basic\Look.cs" />
-    <Compile Include="Assets\Scripts\Maze\MazePlayer.cs" />
-    <Compile Include="Assets\Scripts\Maze\GameData.cs" />
+    <Compile Include="Assets\Scripts\Class\10NavyMeshAgent\MazePlayer.cs" />
     <Compile Include="Assets\Scripts\Defense\DefenseEnemy.cs" />
-    <Compile Include="Assets\Scripts\Shooting\Bullet1.cs" />
-    <Compile Include="Assets\Scripts\Shooting\Player2D.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\Bullet1.cs" />
+    <Compile Include="Assets\Scripts\Class\08Proj2D\Player2D.cs" />
     <Compile Include="Assets\Vertical 2D Shooting BE4\ReadMe\Scripts\ReadmeBE4.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -140,7 +130,6 @@
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
-    <None Include="Assets\Plugin\LitJson.dll" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Audio\Voice\unity-chan_voice_list.txt" />
@@ -392,9 +381,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="LitJson">
-      <HintPath>Assets\Plugin\LitJson.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\2021.1.17f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
