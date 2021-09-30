@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Maze/10NavyMeshAgent.unity
+- path: Assets/Scenes/Class/15Light.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
